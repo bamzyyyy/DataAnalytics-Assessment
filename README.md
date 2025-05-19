@@ -138,7 +138,7 @@ Each SQL file contains:
 ## 💡 Challenges Encountered
 - Ensuring unit conversions from kobo to naira were handled accurately across queries.
 
-- Handling missing or NULL transaction dates required COALESCE and careful filtering to avoid skewed inactivity detection.
+- Handling missing or NULL transaction dates using IS NULL and careful filtering to avoid skewed inactivity detection.
 
 - Normalizing transaction frequency per customer required careful handling of edge cases with short tenure.
 
