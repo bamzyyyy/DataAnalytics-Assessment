@@ -136,11 +136,18 @@ Each SQL file contains:
 - Date and time manipulation
 
 ## 💡 Challenges Encountered
-- Ensuring unit conversions from kobo to naira were handled accurately across queries.
+
+- Unit Conversions: - Ensuring unit conversions from kobo to naira were handled accurately across queries.
+
+- Date Arithmetic: Required careful use of SQL date functions to calculate tenure and inactivity.
+
+- Join Optimization: Several tables had overlapping data (e.g., user IDs across savings and plans), so I ensured clean joins to avoid inflated results.
+
+- Category Bucketing: Grouping by transaction frequency required both precision and logic checks for category boundaries.
+
+- Data Cleaning: Some records had missing or invalid first and last names. I standardized such cases by transforming them to "Unknown" to maintain output consistency.
 
 - Handling missing or NULL transaction dates using IS NULL and careful filtering to avoid skewed inactivity detection.
-
-- Normalizing transaction frequency per customer required careful handling of edge cases with short tenure.
 
 ## ✅ Evaluation Criteria
 
